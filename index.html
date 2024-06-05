@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- <link rel="icon" type="image/svg+xml"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%230058ff%22></rect><path fill=%22%23fff%22 d=%22M72.15 21.33L72.15 21.33Q74.49 22.50 74.90 25.02Q75.30 27.54 73.59 29.61L73.59 29.61Q72.42 31.23 70.58 31.41Q68.73 31.59 66.84 30.69L66.84 30.69Q64.68 29.70 62.30 29.16Q59.91 28.62 57.30 28.62L57.30 28.62Q52.44 28.62 48.62 30.15Q44.79 31.68 42.09 34.52Q39.39 37.35 38.00 41.22Q36.60 45.09 36.60 49.77L36.60 49.77Q36.60 55.26 38.18 59.31Q39.75 63.36 42.54 66.06Q45.33 68.76 49.11 70.07Q52.89 71.37 57.30 71.37L57.30 71.37Q59.73 71.37 62.16 70.92Q64.59 70.47 66.84 69.30L66.84 69.30Q68.73 68.40 70.58 68.67Q72.42 68.94 73.68 70.56L73.68 70.56Q75.48 72.81 74.99 75.20Q74.49 77.58 72.24 78.66L72.24 78.66Q69.90 79.83 67.43 80.60Q64.95 81.36 62.43 81.77Q59.91 82.17 57.30 82.17L57.30 82.17Q50.82 82.17 45.02 80.10Q39.21 78.03 34.67 73.98Q30.12 69.93 27.51 63.86Q24.90 57.78 24.90 49.77L24.90 49.77Q24.90 42.84 27.29 36.99Q29.67 31.14 34.04 26.87Q38.40 22.59 44.34 20.21Q50.28 17.82 57.30 17.82L57.30 17.82Q61.26 17.82 65.04 18.72Q68.82 19.62 72.15 21.33Z%22></path></svg>" /> -->
+        <meta charset="UTF-8">
+        <meta http-equiv=“Pragma” content=”no-cache”>
+        <meta http-equiv=“Expires” content=”-1″>
+        <meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+        <!-- CSS Stylesheets -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/master.css">
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            .box{
+                width: 75%;
+                height: 10%;
+                background-color: rgb(207, 117, 0);
+                margin: auto;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                border-radius: 20px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+            }
+            .dp{
+                width: 250px;
+                height: 250px;
+                background-color:rgba(240, 165, 0, 1);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 20px 0 20px 0;
+            }
+            .info{
+                width: 50%;
+                height: 90%;
+                display: flex;
+                flex-direction: column;
+            }
+            .dp img{
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                /* margin: auto; */
+            }
+            .info{
+                /* width: 100px;
+                height: 100px; */
+                background-color: #fff;
+                margin: 2% 0 2% 0;
+                border-radius: 20px;
+            }
+            .info p , .info h1, .info h4  {
+                /* display: flex; */
+                text-align: center;
+            }
+            .details{
+                display: flex;
+                flex-direction: column;
+                width: 95%;
+                height: 500px;
+                background-color: red;
+                margin-bottom: 20px;
+                margin: auto;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+                border-radius: 20px;
+            }
+            .row1,.row2{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                margin: auto;
+                margin-bottom: 20px;
+                width: 100%;
+            }
+            .col1,.col2{
+                background-color: bisque;
+                border-radius: 20px;
+                height: 150px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .col1{
+                width: 60%;
+            }
+            .col2{
+                width: 30%;
+            }
+            .col3,.col4{
+                background-color: bisque;
+                height: 200px;
+                display: flex;
+                border-radius: 20px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+            }
+            .col3{
+                width: 35%;
+            }
+            .col4{
+                width: 55%;
+            }
+            ul{
+                
+            }
+            li{
+                float: left;
+                /* justify-content: space-around; */
+                margin-right: 10%;
+                /* width: 100%; */
+            }
+            a{
+                text-decoration: none;
+                color: black;
+            }
+            .jspart{
+                display: flex;
+                flex-direction: row;
+                width: 95%;
+                /* height: 400px; */
+                justify-content: space-around;
+                align-items: center;
+                background-color: blue;
+                margin-bottom: 20px;
+                margin: auto;
+                margin-top: 20px;
+                border-radius: 20px;
+            }
+            .calculator,.poem{
+                background-color: bisque;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                width: 45%;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                border-radius: 20px;
+                /* height: 350px; */
+            }
+            .calculator ul {
+                list-style: none;
+                padding: 0;
+                display: inline;
+            }
+            .calculator li label{
+                font-size: larger;
+                font-weight: bold;
+            }
+            .ans{
+                font-size: larger;
+                font-weight: bold;
+                text-align: center;
+                /* margin-left: 4%; */
+            }
+            input[type="button"]{
+                margin-left: 15%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                align-items: center;
+                width: 70%;
+            }
+            input[type="text"],input[type="number"]{
+                margin-left: 25%;
+            }
+            h4>label{
+                margin-left: 15%;
+                /* margin-top: 10px; */
+                /* margin-bottom: 10px; */
+            }
+            form{
+                /* text-align: center; */
+                width: 100%;
+            }
+            .btn{
+                margin-left: 40%;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            .jspart h2{
+                margin-top: 10px;
+            }
+            form ul li:nth-child(1){
+                margin-left: 25%;
+            }
+            .out_poem{
+                font-size: larger;
+                display: flex;
+                flex-direction: row;
+                margin: 0 10px 20px 10px;
+                justify-content: space-between;
+            }
+            #out_poem{
+                margin-right: 5px;
+            }
+            .mid1{
+                width: 100%;
+                height: 700;
+                text-align: center;
+                
+                margin: auto;
+                background-image: linear-gradient(rgb(69, 185, 94), rgb(11, 14, 5));
+                margin: 0%;
+                position: relative;
+                z-index: 1;
+                align-items: center;
+            }
+            .mid{
+                position: absolute;
+                z-index: 2;
+                width: 90%;
+                height: 80%;
+                left: 5%;
+                top: 10%;
+                z-index: 2;
+                border: 1px solid rgba(255, 255, 255, .25);
+                border-radius: 20px;
+                background-color: rgba(255, 255, 255, 0.274);
+                box-shadow: 0 0 10px 10px rgba(252, 250, 250, 0.25);
+                backdrop-filter: blur(15px);
+                min-height: 200px;
+
+            }
+            .slide{
+                background-color: rgb(5, 159, 230);
+                display: flex;
+                flex-direction: column;
+                float: left;
+                /* justify-content: center; */
+                align-items: center;
+                height:310px;
+                width: 30%;
+                margin-right: 20px;
+                margin-bottom: 20px;
+                border: 5px solid black;
+                box-shadow: 10px black;
+                border-radius: 20px;
+            }
+            .slide img{
+                height: 50%;
+                width: 100%;
+                border-radius: 17px 17px 0 0;
+                
+            }
+            .slides{
+                display: flex;
+                flex-direction: row;
+                justify-content:space-around;
+                align-items: center;
+            }
+            .mid_back_pic{
+                width: 100%;
+  height: 500px;
+  object-fit: cover;
+  position: relative;
+  margin: 0%;
+  padding: 0%;
+            }
+            .port h2{
+                color: #fff;
+                margin: 10px 0 10px 0;
+            }
+            .slide h3 {
+                margin-top: 5px;
+            }
+            footer{
+                text-align: center;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+            #error{
+                color: red;
+                margin-left: 15%;
+                font-size: bold;
+            }
+        </style>
+
+        <title>Portfolio Project</title>
+    </head>
+
+    <body>
+        <!-- <div class="container"> -->
+        <div class="box row">
+            <div class="dp">
+                <img src="images/dp.png" alt="Display Picture">
+            </div>
+            <div class="info">
+                <h1>
+                    Thinula Jayavihan
+                </h1>
+                <h4>
+                    Software Developer, Hardware Expertise
+                </h4>
+                <p>
+                    I am an innovative software visionary with a strong expertise in hardware, proficient 
+                    in Python, Java, and web development. Currently, I'm an undergraduate student at the <b>University of Westminster</b>. 
+                    My passion for technology drives my commitment to mastering various programming languages 
+                    and contributing to impactful software projects.
+                </p>
+            </div>
+        </div>
+        <div class = "mid1">
+            <img src="images/pic.jpg" class="mid_back_pic">
+            <dic class="mid">
+                <div class="port">
+                    <h2>Portfolio</h2>
+                </div>
+                <div class="slides">
+                    <div class="slide">
+                        <img src="images/linkedin-statistics.png">
+                        <h3>
+                           <a href="www.linkedin.com/in/thinula-jayavihan-00501827b">linkedin</a> 
+                        </h3>
+                        <p>
+                            LinkedIn is a professional networking platform where users can connect with colleagues. 
+                            It helps in building professional relationships and advancing careers
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/1200x640-ezgif.com-webp-to-jpg-converter.jpg">
+                        <h3>
+                            <a href="https://github.com/edmthinula">Github</a>
+                            
+                        </h3>
+                        <p>
+                            GitHub is a platform for version control and collaboration. 
+                            It uses Git to track changes in code, allowing multiple developers to work together on projects.
+                        </p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/IMG_6379.jpg">
+                        <h3>
+                           <a href="https://edmthinula.github.io/life-on-land/">Life on land</a> 
+                        </h3>
+                        <p>
+Protect, restore and promote sustainable use of terrestrial ecosystems, 
+ combat desertification, and halt and reverse land degradation and halt biodiversity loss.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div class="jspart">
+            <div class="calculator">
+                <h2>
+                    Calculator (Using JS)
+                </h2>
+                <form>
+                    <h4>
+                        <label for="num1">Enter number</label>
+                    </h4>
+                    <input type="number" id="num1" placeholder="Number 1">
+                    <h4>
+                        <label for="num2">Enter number</label>
+                    </h4>
+                    <input type="number" id="num2" placeholder="Number 2">
+                    <h4>
+                        <label>Choose operation</label>
+                    </h4>
+                    <ul>
+                        <li>
+                            <input type="radio" id="plus" name="op" value="plus">
+                            <label for="plus">+</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="minus" name="op" value="minus">
+                            <label for="minus">-</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="multi" name="op" value="multi">
+                            <label for="multi">x</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="divide" name="op" value="divide">
+                            <label for="divide">/</label>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn btn-primary btn-lg" onclick="calculator()">Answer</button>
+                    <div class ="ans">
+                        <span id="ans">
+                        </span>
+                    </div>
+                </form>
+            </div>
+            <div class = "poem">
+                <h2>
+                    Poem (Using JS)
+                </h2>
+                <form>
+                    <h4>
+                        <label for="name">
+                            Enter your name :
+                        </label>
+                    </h4>
+                    <input type="text"  id="name" placeholder="Name">
+                    <h4>
+                        <label for="dog">
+                            Enter your dog's name :
+                        </label>
+                    </h4>
+                    <input type="text" id ="dog" placeholder="Dog's name"> 
+                    <br>
+                    <button type="button" class="btn btn-primary btn-lg" onclick="poem()">Poem</button>
+                    <br>
+                    <span id = "error">
+                        </span>
+                    <div class="out_poem">
+                        <span id="out_poem">
+
+                        </span>
+                        <span id="out_poem1">
+                   
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="details">
+            <div class="row1">
+                <div class="col1">
+                    <h2>
+                        Skill
+                    </h2>
+                    <ul>
+                        <li>
+                            HTML,CSS,JS
+                        </li>
+                        <li>
+                            PHP
+                        </li>
+                        <li>
+                            JAVA
+                        </li>
+                        <li>
+                            Python - ML
+                        </li>
+                        <li>
+                            Hardware Expert
+                        </li>
+                        <li>
+                            react
+                        </li>
+                    </ul>
+                </div>
+                <div class="col2">
+                    <h2>
+                        Contact
+                    </h2>
+                    <ul>
+                        <li>
+                            <a href="mailto:thinulajayavihan9@gmail.com">Email</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/edmthinula">Github</a>
+                        </li>
+                        <li>
+                            <a href="www.linkedin.com/in/thinula-jayavihan-00501827b">linkedin</a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="col3">
+                    <h2>
+                        Career
+                    </h2>
+                    <ul>
+                        <li>Fullstack developer</li>
+
+                    </ul>
+                </div>
+                <div class="col4">
+                    <h2>
+                        Education
+                    </h2>
+                    <ul>
+                        <li>
+                            Undergraduate student at the <b>University of Westminster</b>. 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p class="copyright-text">© Copyright 2024 Thinula Jayavihan </p>
+        </footer>
+        <script src="js/main.js"></script>
+    </body>
+
+
+    <!-- Our codes -->
